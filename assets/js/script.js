@@ -1,7 +1,7 @@
 const apiKeyGeo = "32f3290ba034d4bcd6196fdb06151ab8";
 const apiKeyWeather = "03c7516ad8b972a061cba33872462d14";
 let searchedLocation = "";
-let iconImgUrl = "http://openweathermap.org/img/w/";
+let iconImgUrl = "https://openweathermap.org/img/w/";
 // localStorage.clear();
 let priorSearches = JSON.parse(localStorage.getItem("searches")) || [];
 
