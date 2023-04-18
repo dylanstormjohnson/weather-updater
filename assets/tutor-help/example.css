@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    background-color: black;
+    height: 10%;
+}
+
+main {
+    background-color: yellow;
+    flex: 1;
+}
+
+#top {
+    background-color: purple;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+aside{
+    background-color: aqua;
+    width: 35%;
+}
+
+section > div{
+    background-color: brown;
+    width: 60%;
+}
+#bottom{
+    background-color: orange;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer{
+    background-color: green;
+    height: 10%;
+}

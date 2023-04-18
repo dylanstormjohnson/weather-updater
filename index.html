@@ -1,44 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Checker</title>
-  <meta rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-  integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-</head>
-<body>
-  <header class="container-fluid bg-primary bg-gradient">
-    <h1>Weather Dashboard</h1>
-  </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2 bg-primary">
-          <h3 class="col-sm-12">Search for a City:</h3>
-          <input class="form-control" placeholder="Enter Location">
-          <button class="col-sm-12 btn btn-info btn-outline-primary">Search</button>
-        </div>
-        <div class="col-sm-10 bg-primary">
-          <div class="col-sm-12 bg-white">
-            <h2>None selected!</h2>
-            <p>Temp: N/A</p>
-            <p>Wind: N/A</p>
-            <p>Humidity: N/A</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+
+    <title>Weather Checker</title>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+      <div class="container-fluid" id="information">
+        <div class="row">
+          <div class="col-sm-2" id="buttonsHolder">
+            <h3 class="col-sm-12">Search for a City:</h3>
+            <input
+              id="city"
+              class="form-control"
+              placeholder="Enter Location"
+            />
+            <button class="col-sm-12 btn btn-info btn-outline-primary" id="searchBtn">
+              Search
+            </button>
+            <button class="col-sm-12 btn btn-danger btn-outline-warning" id="clearBtn">
+              Clear
+            </button>
+            <p class="col-sm-12 color-info" id="clearBtn">
+              ------------------------------------
+            </p>
+            <div class="col-sm-12" id="newButtonsHolder">
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="col-sm-12 bg-outline-white">
+              <h2 id="locationName">None selected!</h2>
+              <p id="temp">Temp: N/A</p>
+              <p id="wind">Wind: N/A</p>
+              <p id="humidity">Humidity: N/A</p>
+            </div>
+            <div class="container-fluid row">
+              <h3>5-Day-Forecast:</h3>
+              <div class="col-sm-2 bg-outline-white">
+                <h4 id="day1Weekday">Placeholder</h4>
+                <img src="" alt="Weather Icon" id="day1Icon"></img>
+                <p id="day1Temp">Temp: N/A</p>
+                <p id="day1Wind">Wind: N/A</p>
+                <p id="day1Humidity">Humidity: N/A</p>
+              </div>
+              <div class="col-sm-2 bg-outline-white">
+                <h4 id="day2Weekday">Placeholder</h4>
+                <img src="" alt="Weather Icon" id="day2Icon"></img>
+                <p id="day2Temp">Temp: N/A</p>
+                <p id="day2Wind">Wind: N/A</p>
+                <p id="day2Humidity">Humidity: N/A</p>
+              </div>
+              <div class="col-sm-2 bg-outline-white">
+                <h4 id="day3Weekday">Placeholder</h4>
+                <img src="" alt="Weather Icon" id="day3Icon"></img>
+                <p id="day3Temp">Temp: N/A</p>
+                <p id="day3Wind">Wind: N/A</p>
+                <p id="day3Humidity">Humidity: N/A</p>
+              </div>
+              <div class="col-sm-2 bg-outline-white">
+                <h4 id="day4Weekday">Placeholder</h4>
+                <img src="" alt="Weather Icon" id="day4Icon"></img>
+                <p id="day4Temp">Temp: N/A</p>
+                <p id="day4Wind">Wind: N/A</p>
+                <p id="day4Humidity">Humidity: N/A</p>
+              </div>
+              <div class="col-sm-2 flex">
+                <h4 id="day5Weekday">Placeholder</h4>
+                <img src="" alt="Weather Icon" id="day5Icon"></img>
+                <p id="day5Temp">Temp: N/A</p>
+                <p id="day5Wind">Wind: N/A</p>
+                <p id="day5Humidity">Humidity: N/A</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-
-  </footer>
-  <script src="./assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
-  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" 
-  integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-</body>
+    </main>
+      <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
