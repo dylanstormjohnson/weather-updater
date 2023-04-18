@@ -40,7 +40,7 @@ $(document).ready(function () {
   });
   const checkLocation = (cityToSearch) => {
     fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cityToSearch}&appid=${apiKeyGeo}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityToSearch}&appid=${apiKeyGeo}`
     )
       .then(function (response) {
         return response.json();
